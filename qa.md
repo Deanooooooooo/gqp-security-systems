@@ -49,5 +49,13 @@
 
 ## Live QA
 
-- Deployment: pending.
-- Live HTML/CSS/hero/map checks: pending.
+- Deployment: PASS, GitHub Pages built from `gh-pages`.
+- Live URL: `https://deanooooooooo.github.io/gqp-security-systems/`.
+- Live HTML contains latest business/content markers: PASS.
+- Live CSS HTTP 200: PASS.
+- Live hero image HTTP 200: PASS.
+- Live one H1 / one form / hero form present: PASS.
+- Live verified email and phone links present: PASS.
+- Live map iframe coordinates present and screenshots loaded: PASS.
+- Live bad phrase grep: PASS.
+- Live screenshots: PASS, `qa-live-hero-desktop.png`, `qa-live-hero-mobile.png`, `qa-live-contact-mobile.png`.
