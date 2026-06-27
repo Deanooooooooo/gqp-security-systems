@@ -59,3 +59,12 @@
 - Live map iframe coordinates present and screenshots loaded: PASS.
 - Live bad phrase grep: PASS.
 - Live screenshots: PASS, `qa-live-hero-desktop.png`, `qa-live-hero-mobile.png`, `qa-live-contact-mobile.png`.
+
+## Follow-up Fix QA — 2026-06-27
+
+- Public copy revised to remove build-process / verification-explanation language.
+- Duplicate map removed from contact section; exported HTML now has exactly one iframe.
+- Bottom local SEO map retained and visually checked.
+- `npm run build`: PASS.
+- `npm run build:github`: PASS.
+- Screenshots: PASS, `qa-fix-proof-desktop.png`, `qa-fix-contact-desktop.png`, `qa-fix-map-mobile.png`.

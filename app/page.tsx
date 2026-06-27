@@ -94,17 +94,17 @@ const reviews = [
 ];
 
 const proofPoints = [
-  "Public profile lists CCTV, intruder alarms, fire, access control, AV installations, lighting systems and door bells.",
-  "MyBuilder trade profile describes GQP as a security systems company with 14 years of trade experience.",
-  "Recent written reviews mention quick repairs, short-notice attendance, clear alarm guidance and professional service.",
-  "Huddersfield based, with review/job signals across West Yorkshire, South Yorkshire, Greater Manchester and nearby towns.",
+  "CCTV, intruder alarms, fire, access control, AV, lighting and door bell work handled through one local security specialist.",
+  "Fourteen years of trade experience listed, with practical help for installs, repairs, resets, batteries and handover.",
+  "Customers highlight quick response, short-notice attendance, clear guidance and professional service.",
+  "Huddersfield based, serving homes and small business premises across West Yorkshire and nearby towns.",
 ];
 
 const faqs = [
   ["Can GQP repair an existing alarm?", "Yes. Public MyBuilder review jobs include burglar alarm repair, alarm setup, code reprogramming and back-up battery changes."],
   ["Do they install CCTV?", "Yes. CCTV is listed on the Facebook and MyBuilder profiles, including camera installation and CCTV cabling review jobs."],
   ["Is this only for homes?", "The public listings position GQP for home security and broader security systems work, including access control, fire and AV installations."],
-  ["Where should customers enquire?", "Customers can use the verified phone, email, Facebook page or MyBuilder profile shown on this page."],
+  ["Where should customers enquire?", "Use the phone or email for a direct brief, or check the Facebook and MyBuilder profiles for more background before getting in touch."],
 ];
 
 function Reveal({ children, className = "", delay = 0 }: { children: React.ReactNode; className?: string; delay?: number }) {
@@ -341,7 +341,7 @@ export default function Page() {
                   <Mail size={19} /> Email security brief
                 </button>
                 <p className="m-0 text-xs leading-6 text-white/50">
-                  Selected: {brief}. Sends to the verified public email address; call {phone} if the job is urgent.
+                  Selected: {brief}. Sends your security brief direct to GQP; call {phone} if the job is urgent.
                 </p>
               </form>
             </CardContent>
@@ -353,7 +353,7 @@ export default function Page() {
         {[
           [14, "", "years of trade experience listed"],
           [5, "/5", "rating shown on MyBuilder"],
-          [6, "", "core service categories verified"],
+          [6, "", "security service categories covered"],
         ].map(([value, suffix, label]) => (
           <Card key={String(label)} className="rounded-2xl border-slate-950/10 bg-white/88 text-slate-950 shadow-[0_24px_80px_rgba(15,23,42,0.10)] backdrop-blur-2xl">
             <CardContent className="p-6">
@@ -393,10 +393,10 @@ export default function Page() {
       <section id="proof" className="proof-section relative bg-slate-950 px-4 py-24 text-white sm:px-8">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.72fr_1fr]">
           <Reveal>
-            <p className="mb-3 text-xs font-black uppercase text-emerald-300">Proof</p>
-            <h2 className="text-4xl font-black leading-none sm:text-6xl">The page leads with what can actually be verified.</h2>
+            <p className="mb-3 text-xs font-black uppercase text-emerald-300">Why GQP</p>
+            <h2 className="text-4xl font-black leading-none sm:text-6xl">A tidy route from security concern to working system.</h2>
             <p className="mt-6 text-lg leading-8 text-white/62">
-              Real profile data, real listed services and short customer quotes. The hero image is atmosphere, not a fake project photo.
+              Whether it is a camera blind spot, alarm fault, access issue or outdoor lighting upgrade, the job starts with a clear brief and ends with a system the customer can actually use.
             </p>
           </Reveal>
           <div className="space-y-5">
@@ -506,14 +506,20 @@ export default function Page() {
                 </p>
               </div>
             </div>
-            <iframe
-              title="Map search for GQP Security Systems Huddersfield"
-              src={mapEmbedUrl}
-              width="100%"
-              height="430"
-              loading="lazy"
-              className="min-h-[360px] border-0"
-            />
+            <div className="grid gap-3 border-t border-white/10 bg-white/[0.045] p-5 sm:grid-cols-2">
+              {[
+                ["Fast fault help", "Alarm repairs, keypad issues, back-up batteries and existing system problems."],
+                ["Better visibility", "CCTV, lighting and door bell work for approaches, doors, drives and outbuildings."],
+                ["Controlled entry", "Access control and entry improvements for homes, shops and small premises."],
+                ["Clear handover", "Practical guidance so the customer understands the system after the work is done."],
+              ].map(([title, body]) => (
+                <div key={title} className="rounded-2xl border border-white/10 bg-black/20 p-5">
+                  <BadgeCheck className="mb-5 text-emerald-300" size={24} />
+                  <h4 className="text-xl font-black">{title}</h4>
+                  <p className="mt-3 text-sm leading-7 text-white/62">{body}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
