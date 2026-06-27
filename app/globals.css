@@ -64,6 +64,16 @@ button {
   font: inherit;
 }
 
+.security-gallery-track {
+  scrollbar-width: none;
+  scroll-padding-left: 1rem;
+  -webkit-overflow-scrolling: touch;
+}
+
+.security-gallery-track::-webkit-scrollbar {
+  display: none;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
