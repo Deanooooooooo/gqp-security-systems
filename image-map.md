@@ -32,10 +32,46 @@
 - Placement: hero background only.
 - Note: Not presented as real GQP project proof.
 
+### `public/assets/gallery-cctv.png`
+- Source: generated with built-in image tool for this project.
+- Visible subject: CCTV camera mounted under home eaves.
+- Orientation: landscape 4:3.
+- Quality: high-resolution illustrative service visual.
+- Classification: generated service visual / not project proof.
+- Scores: realness 2, sharpness 5, crop safety 5, aspect fit 5, relevance 5, uniqueness 4.
+- Placement: gallery feature card for CCTV coverage points.
+
+### `public/assets/gallery-alarm.png`
+- Source: generated with built-in image tool for this project.
+- Visible subject: alarm keypad/control panel in hallway.
+- Orientation: landscape 4:3.
+- Quality: high-resolution illustrative service visual.
+- Classification: generated service visual / not project proof.
+- Scores: realness 2, sharpness 5, crop safety 5, aspect fit 5, relevance 5, uniqueness 4.
+- Placement: gallery card for alarm controls.
+
+### `public/assets/gallery-access.png`
+- Source: generated with built-in image tool for this project.
+- Visible subject: access control keypad beside a modern entrance.
+- Orientation: landscape 4:3.
+- Quality: high-resolution illustrative service visual.
+- Classification: generated service visual / not project proof.
+- Scores: realness 2, sharpness 5, crop safety 5, aspect fit 5, relevance 5, uniqueness 4.
+- Placement: gallery card for entry control.
+
+### `public/assets/gallery-lighting-doorbell.png`
+- Source: generated with built-in image tool for this project.
+- Visible subject: exterior security light and smart doorbell.
+- Orientation: landscape 4:3.
+- Quality: high-resolution illustrative service visual.
+- Classification: generated service visual / not project proof.
+- Scores: realness 2, sharpness 5, crop safety 5, aspect fit 5, relevance 5, uniqueness 4.
+- Placement: gallery card for lighting and door bells.
+
 ## Rejected/Unavailable
 
 - Facebook page photos: public logged-out HTML exposed only the profile image reliably. Photos routes were login/limited and did not expose project galleries in the checked routes.
-- No real install/project photos were verified. The page therefore avoids a project gallery and uses service/proof/review sections instead.
+- No real install/project photos were verified. The page uses a clearly service-oriented generated setup gallery rather than a claimed project portfolio.
 - Verified phone/email are used for call and email enquiry routes.
 
 ## Project Variety Audit

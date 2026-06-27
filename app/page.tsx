@@ -100,6 +100,33 @@ const proofPoints = [
   "Huddersfield based, serving homes and small business premises across West Yorkshire and nearby towns.",
 ];
 
+const gallery = [
+  {
+    src: "gallery-cctv.png",
+    title: "CCTV coverage points",
+    body: "Camera positions for entrances, driveways, side access and overlooked blind spots.",
+    alt: "CCTV camera mounted neatly under the eaves of a brick home",
+  },
+  {
+    src: "gallery-alarm.png",
+    title: "Alarm controls",
+    body: "Keypads, batteries, resets and handover help for existing or newly fitted alarm systems.",
+    alt: "Intruder alarm keypad mounted on an interior hallway wall",
+  },
+  {
+    src: "gallery-access.png",
+    title: "Entry control",
+    body: "Door entry and access control for homes, shops, offices and small commercial premises.",
+    alt: "Access control keypad beside a modern entrance door",
+  },
+  {
+    src: "gallery-lighting-doorbell.png",
+    title: "Lighting and door bells",
+    body: "Exterior lighting and smart door bell positions that improve approach visibility.",
+    alt: "Exterior security light and smart doorbell beside a front door",
+  },
+];
+
 const faqs = [
   ["Can GQP repair an existing alarm?", "Yes. Public MyBuilder review jobs include burglar alarm repair, alarm setup, code reprogramming and back-up battery changes."],
   ["Do they install CCTV?", "Yes. CCTV is listed on the Facebook and MyBuilder profiles, including camera installation and CCTV cabling review jobs."],
@@ -251,7 +278,7 @@ export default function Page() {
             </span>
           </a>
           <nav className="hidden items-center gap-6 text-sm font-bold text-slate-600 lg:flex">
-            {["Services", "Proof", "Reviews", "FAQ", "Contact"].map((item) => (
+            {["Services", "Gallery", "Proof", "Reviews", "FAQ", "Contact"].map((item) => (
               <a key={item} href={`#${item.toLowerCase()}`} className="transition hover:text-emerald-700">
                 {item}
               </a>
@@ -387,6 +414,44 @@ export default function Page() {
               </motion.article>
             );
           })}
+        </div>
+      </section>
+
+      <section id="gallery" className="relative z-10 px-4 pb-24 sm:px-8">
+        <div className="mx-auto max-w-7xl">
+          <Reveal className="grid gap-8 lg:grid-cols-[0.72fr_1fr] lg:items-end">
+            <div>
+              <p className="mb-3 text-xs font-black uppercase text-emerald-700">Security setup gallery</p>
+              <h2 className="text-4xl font-black leading-none sm:text-6xl">The parts of the property that usually need attention.</h2>
+            </div>
+            <p className="max-w-2xl text-lg leading-8 text-slate-600 lg:justify-self-end">
+              A strong security setup is not one gadget. It is the right mix of cameras, alarms, entry control and lighting, placed where they reduce real day-to-day risk.
+            </p>
+          </Reveal>
+          <div className="mt-12 grid gap-4 lg:grid-cols-4">
+            {gallery.map((item, index) => (
+              <motion.figure
+                key={item.src}
+                className={`group relative overflow-hidden rounded-2xl border border-slate-950/10 bg-white shadow-sm ${index === 0 ? "lg:col-span-2 lg:row-span-2" : ""}`}
+                whileHover={{ y: -8, scale: 1.01 }}
+                transition={{ type: "spring", stiffness: 220, damping: 22 }}
+              >
+                <div className={`relative overflow-hidden bg-slate-100 ${index === 0 ? "aspect-[4/3] lg:h-full lg:min-h-[520px]" : "aspect-[4/3]"}`}>
+                  <Image
+                    src={assets(item.src)}
+                    alt={item.alt}
+                    fill
+                    sizes={index === 0 ? "(min-width: 1024px) 50vw, 100vw" : "(min-width: 1024px) 25vw, 100vw"}
+                    className="object-cover transition duration-700 group-hover:scale-105"
+                  />
+                </div>
+                <figcaption className={index === 0 ? "absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950 via-slate-950/78 to-transparent p-6 pt-24 text-white" : "p-5"}>
+                  <h3 className="text-2xl font-black">{item.title}</h3>
+                  <p className={`mt-3 text-sm leading-7 ${index === 0 ? "max-w-xl text-white/78" : "text-slate-600"}`}>{item.body}</p>
+                </figcaption>
+              </motion.figure>
+            ))}
+          </div>
         </div>
       </section>
 

@@ -65,6 +65,9 @@
 - Public copy revised to remove build-process / verification-explanation language.
 - Duplicate map removed from contact section; exported HTML now has exactly one iframe.
 - Bottom local SEO map retained and visually checked.
+- Structured service gallery added with four project-bound generated visuals: CCTV, alarm controls, access control, lighting/door bells.
+- Gallery is labelled and written as service-area marketing, not a claimed GQP project portfolio.
 - `npm run build`: PASS.
 - `npm run build:github`: PASS.
 - Screenshots: PASS, `qa-fix-proof-desktop.png`, `qa-fix-contact-desktop.png`, `qa-fix-map-mobile.png`.
+- Gallery screenshots: PASS, `qa-gallery-desktop-v2.png`, `qa-gallery-mobile-v2.png`.
